@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width; initial-scale=0.8; maximum-scale=1.0; user-scalable=1;"/>
+
+    <title>Pebble Control</title>
+
+<!-- fonts -->
+<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='/static/css/button.css' rel='stylesheet' type='text/css'>
+<link href='/static/css/control.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<h1>Pebble Controller</h1>
+<div class="three">
+
+    <table border="0" class="tg">
+      <tr>
+        <td class="tg-031e"></td>
+        <td class="tg-031e">
+            <a href="#" class="button" onclick="httpGet('/keycode/126')">
+                <span>↑</span>
+            </a>
+        </td>
+        <td class="tg-031e"></td>
+      </tr>
+      <tr>
+        <td class="tg-031e">
+            <a href="#" class="button" onclick="httpGet('/keycode/123')">
+                <span>←</span>
+            </a>
+        </td>
+        <td class="tg-031e">
+            <a href="#" class="button" onclick="httpGet('/keycode/125')">
+                <span>↓</span>
+            </a>
+        </td>
+        <td class="tg-031e">
+            <a href="#" class="button" onclick="httpGet('/keycode/124')">
+                <span>→</span>
+            </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="tg-031e" colspan="3">
+            <a href="#" class="button" onclick="httpGet('/slideshow')">
+                <span>Action 1</span>
+            </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="tg-031e" colspan="3">
+            <a href="#" class="button" onclick="httpGet('/')">
+                <span>Action 2</span>
+            </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="tg-031e" colspan="3">
+            <a href="#" class="button" onclick="httpGet('/')">
+                <span>Action 3</span>
+            </a>
+        </td>
+      </tr>
+    </table>
+
+
+
+
+</div>
+
+</body>
+
+<!-- script for keycode -->
+<script type="text/javascript">
+function httpGet(tdeUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", tdeUrl, false );
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+</script>
+</html>
